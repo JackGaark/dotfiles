@@ -1,0 +1,47 @@
+format = "$shell$directory$git_branch$git_status$character"
+
+[directory]
+style = "blue"
+format = "[$path ]($style)"
+truncation_length = 99
+truncation_symbol = "…/"
+truncate_to_repo = false
+
+[git_branch]
+symbol = "󰘬"
+# Replace #5e8e5f with your actual color if needed
+format = "[ [$symbol](bold green bg:#5e8e5f) $branch ](bg:#5e8e5f green)"
+
+[git_status]
+disabled = false
+ignore_submodules = false
+ahead = "[􀄨 ($count) ](blue)"
+behind = "[􀄩 ($count) ](yellow)"
+deleted = "[􀆄 ($count) ](red)"
+diverged = "[􀢁 ($count) ](red)"
+format = "[ $all_status$ahead_behind]()"
+modified = "[􁚛 ($count) ](yellow)"
+renamed = "[􀈏  ($count) ](purple)"
+staged = "[􀥄 ($count) ](cyan)"
+stashed = "[􀐚 ($count) ](blue)"
+
+[character]
+disabled = false
+success_symbol = "[􀄫](green)"
+error_symbol = "[􀄫](red)"
+
+[shell]
+zsh_indicator = " zsh"
+nu_indicator = " nu"
+fish_indicator = ""
+unknown_indicator = ""
+style = "yellow"
+disabled = false
+
+[line_break]
+disabled = false
+
+[hostname]
+ssh_only = false
+format = "[$hostname]($style)"
+style = "bold cyan"
